@@ -1,38 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-<remote name="mi-sdm439"
-            fetch="https://github.com/mi-sdm439" />
- <remote name="LOS"
-            fetch="https://github.com/LineageOS" />
 
+    <!-- remotes -->
+    <remote name="mi-sdm439"          fetch="https://github.com/mi-sdm439" />
+    <remote name="xiaomi-sdm439-devs" fetch="https://github.com/xiaomi-sdm439-devs" />
+    <remote name="LineageOS"          fetch="https://github.com/LineageOS" />
 
- <!-- Replacements -->
-<remove-project name="crdroidandroid/android_hardware_qcom_audio" />
-<project path="hardware/qcom-caf/msm8996/audio" name="android_hardware_qcom_audio" remote="LOS" revision="lineage-18.1-caf-msm8996" clone-depth="1" />
+    <!-- Device Trees -->
+    <project path="device/xiaomi/pine"           name="android_device_xiaomi_pine"            remote="mi-sdm439" revision="lineage-18.1-mod"/>
+    <project path="device/xiaomi/sdm439-common"  name="android_device_xiaomi_sdm439-common"   remote="mi-sdm439" revision="lineage-18.1-mod"/>
+      
+    <!-- Vendor Trees -->
+    <project path="vendor/xiaomi/pine"           name="proprietary_vendor_xiaomi_pine"            remote="mi-sdm439" revision="lineage-18.1" />
+    <project path="vendor/xiaomi/sdm439-common"  name="proprietary_vendor_xiaomi_sdm439-common"   remote="mi-sdm439" revision="lineage-18.1" />
 
-<remove-project name="crdroidandroid/android_hardware_qcom_media" />
-<project path="hardware/qcom-caf/msm8996/media" name="android_hardware_qcom_media" remote="LOS" revision="lineage-18.1-caf-msm8996" clone-depth="1" />
+    <!-- Kernel -->
+    <project path="kernel/xiaomi/sdm439"         name="android_kernel_xiaomi_sdm439" remote="xiaomi-sdm439-devs" revision="a11/lineageos" />
+    
+    <!-- Replacements -->
+    <remove-project name="android_hardware_qcom_audio" />
+    <project path="hardware/qcom-caf/msm8996/audio" name="android_hardware_qcom_audio" remote="LineageOS" revision="lineage-18.1-caf-msm8996" clone-depth="1" />
+    <remove-project name="android_hardware_qcom_media" />
+    <project path="hardware/qcom-caf/msm8996/media" name="android_hardware_qcom_media" remote="LineageOS" revision="lineage-18.1-caf-msm8996" clone-depth="1" />
+    <remove-project name="android_hardware_qcom_display" />
+    <project path="hardware/qcom-caf/msm8996/display" name="android_hardware_qcom_display" remote="mi-sdm439" revision="lineage-18.1-caf-msm8996" clone-depth="1" />        
 
-<remove-project name="crdroidandroid/android_hardware_qcom_display" />
-<project path="hardware/qcom-caf/msm8996/display" name="android_hardware_qcom_display" remote="mi-sdm439" revision="lineage-18.1-caf-msm8996" clone-depth="1" />
-            
- <remove-project name="lineageOS/android_packages_apps_FMRadio"/>
-  <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="mi-sdm439" revision="lineage-18.1"/>
+    <!-- MODs -->
+    <project path="vendor/miuicamera" name="vendor_MiuiCamera" remote="mi-sdm439" revision="eleven" />
+    <remove-project name="lineageOS/android_packages_apps_FMRadio" />
+    <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="mi-sdm439" revision="lineage-18.1" clone-depth="1" />
 
-            
-            
-  
- <!-- Kernels -->
-  <project path="kernel/xiaomi/sdm439"         name="xiaomi-sdm439-devs/android_kernel_xiaomi_sdm439" remote="github" revision="a11/lineageos"/>
-
-<!-- Device Trees -->
-  <project path="device/xiaomi/sdm439-common"  name="android_device_xiaomi_sdm439-common"  groups="device" remote="mi-sdm439" revision="lineage-18.1-mod"/>
-  <project path="device/xiaomi/pine"           name="android_device_xiaomi_pine"           groups="device" remote="mi-sdm439"/>
-
- <!-- Vendor Trees -->
-  <project path="vendor/xiaomi/sdm439-common"  name="proprietary_vendor_xiaomi_sdm439-common"  groups="device" remote="mi-sdm439"/>
-  <project path="vendor/xiaomi/pine"           name="proprietary_vendor_xiaomi_pine"           groups="device" remote="mi-sdm439"/>
-
- <!-- MODs -->
-  <project path="vendor/miuicamera" name="vendor_MiuiCamera" remote="mi-sdm439" revision="eleven"/>
 </manifest>
