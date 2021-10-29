@@ -2,7 +2,7 @@
 <manifest>
 
     <!-- remotes -->
-	<remote name="mi-sdm439"          fetch="https://github.com/mi-sdm439" />
+    <remote name="mi-sdm439"          fetch="https://github.com/mi-sdm439" />
     <remote name="xiaomi-sdm439-devs" fetch="https://github.com/xiaomi-sdm439-devs" />
     <remote name="LineageOS"          fetch="https://github.com/LineageOS" />
 
