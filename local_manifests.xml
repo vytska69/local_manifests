@@ -18,11 +18,11 @@
     <project path="kernel/xiaomi/sdm439"         name="android_kernel_xiaomi_sdm439" remote="xiaomi-sdm439-devs" revision="a11/lineageos" />
     
     <!-- Replacements -->
-    <remove-project name="android_hardware_qcom_audio" />
+    <remove-project name="crdroidandroid/android_hardware_qcom_audio" />
     <project path="hardware/qcom-caf/msm8996/audio" name="android_hardware_qcom_audio" remote="LineageOS" revision="lineage-18.1-caf-msm8996" clone-depth="1" />
-    <remove-project name="android_hardware_qcom_media" />
+    <remove-project name="crdroidandroid/android_hardware_qcom_media" />
     <project path="hardware/qcom-caf/msm8996/media" name="android_hardware_qcom_media" remote="LineageOS" revision="lineage-18.1-caf-msm8996" clone-depth="1" />
-    <remove-project name="android_hardware_qcom_display" />
+    <remove-project name="crdroidandroid/android_hardware_qcom_display" />
     <project path="hardware/qcom-caf/msm8996/display" name="android_hardware_qcom_display" remote="mi-sdm439" revision="lineage-18.1-caf-msm8996" clone-depth="1" />        
 
     <!-- MODs -->
