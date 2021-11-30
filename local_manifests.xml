@@ -4,7 +4,6 @@
    <remote  name="hsx02"
            fetch="https://github.com/hsx02" />       
 
-  <project path="packages/apps/FMRadio" name="packages_apps_FMRadio" remote="hsx02" revision="lineage-18.1"/>
 
  <!-- Kernels -->
   <project path="kernel/xiaomi/sdm439" name="kernel_xiaomi_sdm439" remote="hsx02" revision="S"  clone-depth="1"/>
