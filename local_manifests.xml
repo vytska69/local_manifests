@@ -6,7 +6,7 @@
 
 
  <!-- Kernels -->
-  <project path="kernel/xiaomi/sdm439" name="kernel_xiaomi_sdm439" remote="hsx02" revision="S"  clone-depth="1"/>
+  <project path="kernel/xiaomi/sdm439" name="kernel_xiaomi_sdm439" remote="hsx02" revision="r11.0"  clone-depth="1"/>
 
  <!-- Device Trees -->
   <project path="device/xiaomi/pine" name="device_xiaomi_pine" remote="hsx02" revision="Aex-12"/>
